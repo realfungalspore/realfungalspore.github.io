@@ -8,3 +8,78 @@
 body {
 	font-family: "Helvetica"
 }
+
+.line {
+	pointer-events: none;
+	position: relative;
+  border-top: 2px solid #333; /* Thickness, style, color */
+  width: 5%;                /* Full width */
+  /*margin: 50% 0;             /* Spacing above and below */
+  transform: translateY(50%);
+}
+
+.line:before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	transform: translate(95%, -50%);
+	border-left:2px solid #333;
+	border-top:2px solid #333;
+	border-bottom:2px solid #333;
+}
+
+
+
+.container {
+	margin:5px;
+	padding:5px;
+}
+
+.horizontal {
+	display:flex;
+	border: 2px solid blue;
+	flex-grow: 1;
+
+}
+
+.vertical {
+	width:90%;
+	display:flex;
+	border: 2px solid red;
+	flex-direction: column;
+
+}
+
+.vertical:first-child {
+	flex-grow:0;
+	justify-content: center;
+	width:6%;
+}
+.vertical:nth-child(n+2) {
+	display: none; 
+}
+
+.vertical, .horizontal {
+	border:0px
+}
+
+/* click */
+
+.clickable, a {
+color:black;
+  position:relative;
+  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s; /* Smooth motion */
+  cursor: pointer;
+	z-index:1;
+text-decoration: underline;
+}
+
+
+/* Hover State Trigger */
+.clickable:hover, a:hover {
+  /* Moves 8px right (X-axis) and 8px up (Y-axis) */
+  transform: translate(4px, -4px); 
+  color:blue
+}
