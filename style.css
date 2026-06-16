@@ -6,7 +6,8 @@
 }
 
 body {
-	font-family: "Helvetica"
+	font-family: "Helvetica";
+	font-size:20px;
 }
 
 .line {
@@ -54,7 +55,7 @@ body {
 .vertical:first-child {
 	flex-grow:0;
 	justify-content: center;
-	width:6%;
+	width:10%;
 }
 .vertical:nth-child(n+2) {
 	display: none; 
