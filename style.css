@@ -45,7 +45,6 @@ body {
 }
 
 .vertical {
-	width:90%;
 	display:flex;
 	border: 2px solid red;
 	flex-direction: column;
@@ -55,9 +54,9 @@ body {
 .vertical:first-child {
 	flex-grow:0;
 	justify-content: center;
-	width:10%;
 }
 .vertical:nth-child(n+2) {
+	flex-grow:1;
 	display: none; 
 }
 
